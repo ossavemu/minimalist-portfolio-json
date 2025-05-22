@@ -1,13 +1,13 @@
 ---
-import { basics } from "@cv"
+import { basics } from "@cv";
 
 interface Props {
-  title: string
+  title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 
-const { image, summary, url } = basics
+const { image, summary, url } = basics;
 ---
 
 <!doctype html>
@@ -27,14 +27,16 @@ const { image, summary, url } = basics
     <meta property="og:image" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={url.split("//")[1] ?? ''} />
+    <meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
     <meta property="twitter:url" content={url} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={summary} />
     <meta name="twitter:image" content="" />
   </head>
   <body>
-    <slot />
+    <div class="bg-container animated-gradient">
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -120,5 +122,25 @@ const { image, summary, url } = basics
     article {
       break-inside: avoid;
     }
+  }
+  .animated-gradient {
+    background: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(0, 255, 255, 0.25) 50%,
+      rgba(240, 248, 255, 0.7) 100%
+    );
+    animation: gradientAnimation 20s ease-in-out infinite;
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+  }
+  .bg-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    overflow: scroll;
   }
 </style>
