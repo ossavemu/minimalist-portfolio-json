@@ -79,16 +79,40 @@
   "volunteer": [],
   "education": [
     {
-      "institution": "Universitat Oberta de Catalunya",
-      "url": "https://www.uoc.edu/portal/es/index.html",
-      "area": "Software Engineer",
+      "institution": "Unicafam associated with Google",
+      "area": "Specialization in Information Technologies",
+      "studyType": "Specialization",
+      "startDate": "2022-01-01",
+      "endDate": "2022-05-01"
+    },
+    {
+      "institution": "Universidad Icesi",
+      "area": "Bachelor in Social Sciences",
       "studyType": "Bachelor",
-      "startDate": "2003-01-01",
-      "endDate": "2009-01-01",
-      "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
-      ]
+      "startDate": "2016-01-01",
+      "endDate": "2021-12-31"
+    },
+    {
+      "institution": "Servicio Nacional de Aprendizaje (SENA)",
+      "area": "Engineer in Software Analysis and Development, Web Application Development",
+      "studyType": "Technologist",
+      "startDate": "2021-10-01",
+      "endDate": "2023-12-31",
+      "note": "Program in agreement with UNIPAHU"
+    },
+    {
+      "institution": "Universidad Icesi",
+      "area": "Political Scientist with emphasis in International Relations",
+      "studyType": "Undergraduate",
+      "startDate": "2016-01-01",
+      "endDate": "2021-10-31"
+    },
+    {
+      "institution": "Universidad del Valle (CO)",
+      "area": "Professional Philosopher, Philosophy",
+      "studyType": "Undergraduate",
+      "startDate": "2018-01-01",
+      "endDate": "2022-02-28"
     }
   ],
   "awards": [
