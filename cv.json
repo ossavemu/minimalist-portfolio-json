@@ -286,7 +286,8 @@
         "Creación de planes de clase, rúbricas y gamificación",
         "Desarrollo y despliegue completo"
       ],
-      "url": "https://edtk.co/"
+      "url": "https://edtk.co/",
+      "github": "https://github.com/ossavemu/eduteka-lab"
     },
     {
       "name": "Revista Légein",
@@ -297,7 +298,8 @@
         "Coordinación de publicaciones",
         "Desarrollo de la web"
       ],
-      "url": "https://revista-legein.vercel.app/"
+      "url": "https://revista-legein.vercel.app/",
+      "github": "https://github.com/ossavemu/revista-legein"
     },
     {
       "name": "ClientFy",
@@ -308,7 +310,8 @@
         "Optimización de procesos",
         "Entrega continua de valor"
       ],
-      "url": "https://usuario.clientfy.com.mx"
+      "url": "https://usuario.clientfy.com.mx",
+      "github": "https://github.com/ossavemu/clientfy"
     }
   ]
 }
