@@ -139,7 +139,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
     try {
       // Try to import the module
       const { default: HotKeyPad } = await import(
-        '/node_modules/hotkeypad/dist/index.js'
+        'https://unpkg.com/hotkeypad?module'
       );
 
       const hotkeypad = new HotKeyPad();
