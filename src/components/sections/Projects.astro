@@ -1,11 +1,22 @@
 ---
 import GitHub from "@/icons/GitHub.astro"
 import Section from "../Section.astro"
+import type { CV } from "@/cv"
+import { SECTION_TITLES } from '@/constants';
+import type { Language } from '@/constants';
 
-import { projects } from "@cv"
+interface Props {
+  data: CV;
+}
+
+const { data } = Astro.props;
+const projects = data.projects;
+
+// Get current language from Astro's i18n
+const currentLang = (Astro.currentLocale || 'en') as Language;
 ---
 
-<Section title="Proyectos">
+<Section title={SECTION_TITLES.PROJECTS[currentLang]}>
   <ul>
     {
       projects.map(

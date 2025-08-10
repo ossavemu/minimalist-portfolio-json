@@ -1,0 +1,107 @@
+---
+import { COMPONENT_IDS, CSS_CLASSES } from '@/constants';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { LANGUAGES } from '@/constants';
+
+const currentLocale = Astro.currentLocale || LANGUAGES.EN;
+const otherLocale =
+  currentLocale === LANGUAGES.ES ? LANGUAGES.ES : LANGUAGES.EN;
+const switchUrl = getRelativeLocaleUrl(otherLocale, '/');
+---
+
+<button
+  id={COMPONENT_IDS.LANGUAGE_SWITCHER}
+  class={`${CSS_CLASSES.GLASS_BUTTON} ${CSS_CLASSES.NO_PRINT}`}
+  title="Switch Language / Cambiar Idioma"
+>
+  <span id={COMPONENT_IDS.LANGUAGE_TEXT}>{currentLocale.toUpperCase()}</span>
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M2 12h20"></path>
+    <path
+      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+    ></path>
+  </svg>
+</button>
+
+<script
+  define:vars={{ switchUrl, switcherId: COMPONENT_IDS.LANGUAGE_SWITCHER }}
+  is:inline
+>
+  function initLanguageSwitcher() {
+    const switcher = document.getElementById(switcherId);
+    if (!switcher) return;
+
+    switcher.addEventListener('click', () => {
+      window.location.href = switchUrl;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+</script>
+
+<style>
+  .glass-button {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    color: #1f2937;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.9rem;
+
+    /* Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .glass-button:active {
+    transform: translateY(-1px);
+  }
+
+  .glass-button svg {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  .glass-button:hover svg {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .glass-button {
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+    }
+  }
+</style>

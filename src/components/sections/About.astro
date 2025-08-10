@@ -1,11 +1,21 @@
 ---
 import Section from "../Section.astro"
+import type { CV } from "@/cv"
+import { SECTION_TITLES } from '@/constants';
+import type { Language } from '@/constants';
 
-import { basics } from "@cv"
-const { summary } = basics
+interface Props {
+  data: CV;
+}
+
+const { data } = Astro.props;
+const { summary } = data.basics;
+
+// Get current language from Astro's i18n
+const currentLang = (Astro.currentLocale || 'en') as Language;
 ---
 
-<Section title="Sobre mí">
+<Section title={SECTION_TITLES.ABOUT[currentLang]}>
   <p>
     {summary}
   </p>

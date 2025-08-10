@@ -1,0 +1,54 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+import KeyboardManager from '@/components/KeyboardManager.astro';
+import LanguageSwitcher from '@/components/LanguageSwitcher.astro';
+import LanguageToast from '@/components/LanguageToast.astro';
+import About from '@/components/sections/About.astro';
+import Education from '@/components/sections/Education.astro';
+import Experience from '@/components/sections/Experience.astro';
+import Hero from '@/components/sections/Hero.astro';
+import Projects from '@/components/sections/Projects.astro';
+import Skills from '@/components/sections/Skills.astro';
+
+import { getCVData } from '@/i18n';
+
+// Use Spanish locale for this page
+const currentLang = 'es';
+const cvData = getCVData(currentLang);
+const { basics } = cvData;
+const { name, label } = basics;
+
+const title = `Portafolio de ${name} - ${label}`;
+---
+
+<Layout title={title} currentLang={currentLang}>
+  <LanguageSwitcher />
+  <LanguageToast />
+
+  <main>
+    <Hero data={cvData} />
+    <About data={cvData} />
+    <Experience data={cvData} />
+    <Education data={cvData} />
+    <Projects data={cvData} />
+    <Skills data={cvData} />
+  </main>
+  <KeyboardManager data={cvData} />
+</Layout>
+
+<style>
+  main {
+    padding: 4rem 2rem;
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem 1rem;
+    }
+  }
+</style>

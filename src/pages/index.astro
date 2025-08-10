@@ -1,41 +1,57 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 
-import About from "@/components/sections/About.astro"
-import Education from "@/components/sections/Education.astro"
-import Experience from "@/components/sections/Experience.astro"
-import Hero from "@/components/sections/Hero.astro"
-import Projects from "@/components/sections/Projects.astro"
-import Skills from "@/components/sections/Skills.astro"
-import KeyboardManager from "@/components/KeyboardManager.astro"
+import About from "@/components/sections/About.astro";
+import Education from "@/components/sections/Education.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+import LanguageToast from "@/components/LanguageToast.astro";
 
-import { basics } from "@cv"
-const { name, label } = basics
+import { getCVData } from "@/i18n";
+
+// Use English locale for this page (default)
+const currentLang = 'en';
+const cvData = getCVData(currentLang);
+const { basics } = cvData;
+const { name, label } = basics;
+
+const title = `Portfolio of ${name} - ${label}`;
 ---
 
-<Layout title={`Portafolio de ${name} - ${label}`}>
+<Layout title={title} currentLang={currentLang}>
+  <LanguageSwitcher />
+  <LanguageToast />
+  
   <main>
-    <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Projects />
-    <Skills />
+    <Hero data={cvData} />
+    <About data={cvData} />
+    <Experience data={cvData} />
+    <Education data={cvData} />
+    <Projects data={cvData} />
+    <Skills data={cvData} />
   </main>
 
-  <KeyboardManager />
+  <KeyboardManager data={cvData} />
 </Layout>
+
 
 <style>
   main {
-    padding: 4rem;
+    padding: 4rem 2rem;
     margin: auto;
     width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
   }
 
   @media (width <= 700px) {
     main {
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
   }
 </style>

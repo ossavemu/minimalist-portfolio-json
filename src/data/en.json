@@ -1,0 +1,141 @@
+{
+  "basics": {
+    "name": "Oscar Santiago Vélez Muñoz",
+    "label": "Senior Software Engineer | Backend & Full-Stack Development",
+    "image": "/me.webp",
+    "email": "osanvem@gmail.com",
+    "phone": "+57 3053483248",
+    "url": "https://portfolio-os-pi.vercel.app/",
+    "summary": "Results-driven Senior Software Engineer with 4+ years of experience specializing in backend development (Node.js, Python), full-stack solutions (React), and cloud architecture. Proven expertise in migrating monolithic systems to scalable microservices, developing robust SDKs, and engineering complex data extraction solutions. An accomplished technical leader and university-level educator with a track record of mentoring high-performing teams and driving the adoption of best practices in Agile and DevOps environments. Currently specializing in web scraping, Python, and the Cloudflare ecosystem.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Cali",
+      "countryCode": "CO",
+      "region": "Valle del Cauca"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "oscar-santiago-velez-muñoz-875894115",
+        "url": "https://linkedin.com/in/oscar-santiago-velez-mu%C3%B1oz-875894115"
+      },
+      {
+        "network": "GitHub",
+        "username": "ossavemu",
+        "url": "https://github.com/ossavemu"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ClientFy",
+      "position": "Software Architect (Freelance)",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": null,
+      "summary": "Led the successful migration of a monolithic enterprise application to a scalable microservices architecture. Implemented a robust CI/CD pipeline and DevOps culture, significantly reducing deployment times.",
+      "highlights": [
+        "Architected backend services using Node.js and NestJS.",
+        "Improved system performance and flexibility.",
+        "Enhanced value delivery to end-users."
+      ]
+    },
+    {
+      "name": "Polux Apps",
+      "position": "Frontend Web Developer",
+      "url": "",
+      "startDate": "2021-06-01",
+      "endDate": null,
+      "summary": "Developed and maintained responsive, high-performance user interfaces for enterprise web applications using Vue.js. Deployed and managed services on Amazon Web Services (AWS).",
+      "highlights": [
+        "Integrated frontend components with backend services via REST APIs.",
+        "Optimized services for cost and performance on AWS."
+      ]
+    },
+    {
+      "name": "Universidad del Valle",
+      "position": "University Professor",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": null,
+      "summary": "Instructed over 1,000 students in foundational and advanced courses on programming, web development, and software architecture. Designed curricula focused on emerging technologies like AI and cloud computing.",
+      "highlights": []
+    },
+    {
+      "name": "Universidad ICESI",
+      "position": "Educational Supervisor & Lead Developer",
+      "url": "",
+      "startDate": "2023-01-01",
+      "endDate": "2023-12-31",
+      "summary": "Spearheaded the complete lifecycle development of EdutekaLab, an educational platform with AI-powered tools. Led educational initiatives to improve academic performance through technology.",
+      "highlights": [
+        "Built with React, Node.js, and MySQL."
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Google Creative Campus & Unicafam",
+      "url": "",
+      "area": "Specialization in Information Technologies",
+      "studyType": "Specialization",
+      "startDate": "2022-01-01",
+      "endDate": "2022-12-31",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Universidad del Valle",
+      "url": "",
+      "area": "Philosophy",
+      "studyType": "Professional Degree",
+      "startDate": "2018-01-01",
+      "endDate": "2022-12-31",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Universidad ICESI",
+      "url": "",
+      "area": "Social Sciences & Political Science",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2016-01-01",
+      "endDate": "2021-12-31",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    { "name": "Backend", "level": "", "keywords": ["Python", "Node.js", "NestJS", "Express.js", "Prisma ORM"] },
+    { "name": "Frontend", "level": "", "keywords": ["React", "Vue.js", "JavaScript", "HTML5", "CSS3"] },
+    { "name": "Databases", "level": "", "keywords": ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+    { "name": "DevOps & Cloud", "level": "", "keywords": ["AWS", "Cloudflare", "Docker", "NGINX", "CI/CD"] },
+    { "name": "Web Scraping", "level": "", "keywords": ["Data Extraction", "Automation Scripts"] }
+  ],
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Enterprise Architectural Migration | ClientFy",
+      "isActive": true,
+      "description": "Overhauled a legacy monolithic system to improve scalability and performance by leading the transition to a microservices architecture and implementing a full DevOps pipeline.",
+      "highlights": ["Node.js", "NestJS", "Microservices", "DevOps", "CI/CD"],
+      "url": "https://github.com/ossavemu/clientfy-migration",
+      "github": "https://github.com/ossavemu/clientfy-migration"
+    },
+    {
+      "name": "EdutekaLab | AI-Powered Educational Platform",
+      "isActive": true,
+      "description": "Developed a comprehensive SaaS platform for educators, implementing features for lesson planning, rubric generation, and gamification using AI.",
+      "highlights": ["React", "AI Integration", "SaaS", "Education Tech", "Gamification"],
+      "url": "https://github.com/ossavemu/edutekalab",
+      "github": "https://github.com/ossavemu/edutekalab"
+    }
+  ]
+}

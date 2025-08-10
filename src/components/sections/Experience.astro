@@ -1,14 +1,25 @@
 ---
 import Section from "../Section.astro"
+import type { CV } from "@/cv"
+import { SECTION_TITLES } from '@/constants';
+import type { Language } from '@/constants';
 
-import { work } from "@cv"
+interface Props {
+  data: CV;
+}
+
+const { data } = Astro.props;
+const work = data.work;
+
+// Get current language from Astro's i18n
+const currentLang = (Astro.currentLocale || 'en') as Language;
 ---
 
-<Section title="Experiencia laboral">
+<Section title={SECTION_TITLES.EXPERIENCE[currentLang]}>
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
+        ({ name, startDate, endDate, position, summary, url }) => {
           const startYear = new Date(startDate).getFullYear()
           const endYear =
             endDate != null ? new Date(endDate).getFullYear() : "Actual"
@@ -112,7 +123,6 @@ import { work } from "@cv"
     box-shadow: 1px 1px 1px #222222;
     opacity: 0;
     border: 1px solid #111111;
-    z-index: 99999;
     visibility: hidden;
     border-radius: 6px;
   }

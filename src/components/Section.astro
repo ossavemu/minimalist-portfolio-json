@@ -1,33 +1,82 @@
 ---
-// se ejecuta en el servidor o en build time <----
-const { title } = Astro.props
+const { title } = Astro.props;
 ---
 
-<section>
+<section class="glass-card">
   {title && <h2>{title}</h2>}
-  <slot />
+  <div class="card-content">
+    <slot />
+  </div>
 </section>
 
-<script>
-  // se ejecuta en el cliente <----
-</script>
-
 <style>
-  section {
+  .glass-card {
     max-width: 700px;
-    margin: 0 auto 48px;
+    margin: 0 auto 32px;
+    padding: 2rem;
+    border-radius: 1.5rem;
+
+    /* Clean Liquid Glass Effect */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    /* Subtle animation */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.5s;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .glass-card:hover::before {
+    left: 100%;
+  }
+
+  .card-content {
+    position: relative;
   }
 
   h2 {
-    margin-bottom: 8px;
+    margin-bottom: 1.5rem;
     font-weight: 700;
     line-height: 1.5;
     font-size: 1.5rem;
+    color: #0f172a;
+    font-weight: 800;
   }
 
   @media (width <= 700px) {
-    section {
-      margin-bottom: 38px;
+    .glass-card {
+      margin: 0 1rem 24px;
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
     }
   }
 </style>

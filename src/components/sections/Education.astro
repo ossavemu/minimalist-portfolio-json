@@ -1,10 +1,21 @@
 ---
 import Section from "../Section.astro"
+import type { CV } from "@/cv"
+import { SECTION_TITLES } from '@/constants';
+import type { Language } from '@/constants';
 
-import { education } from "@cv"
+interface Props {
+  data: CV;
+}
+
+const { data } = Astro.props;
+const education = data.education;
+
+// Get current language from Astro's i18n
+const currentLang = (Astro.currentLocale || 'en') as Language;
 ---
 
-<Section title="Educación">
+<Section title={SECTION_TITLES.EDUCATION[currentLang]}>
   <ul>
     {
       education.map(({ institution, startDate, endDate, area }) => {

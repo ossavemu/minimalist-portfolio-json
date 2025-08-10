@@ -1,0 +1,141 @@
+{
+  "basics": {
+    "name": "Oscar Santiago Vélez Muñoz",
+    "label": "Ingeniero de Software Senior | Desarrollo Backend & Full-Stack",
+    "image": "/me.webp",
+    "email": "osanvem@gmail.com",
+    "phone": "+57 3053483248",
+    "url": "https://portfolio-os-pi.vercel.app/",
+    "summary": "Ingeniero de Software Senior orientado a resultados con más de 4 años de experiencia, especializado en desarrollo backend (Node.js, Python), soluciones full-stack (React) y arquitectura en la nube. Experiencia comprobada en la migración de sistemas monolíticos a microservicios escalables, desarrollo de SDKs robustos y diseño de soluciones complejas de extracción de datos. Líder técnico y educador a nivel universitario con un historial de mentoría a equipos de alto rendimiento e impulso de mejores prácticas en entornos Agile y DevOps. Actualmente especializándome en web scraping, Python y el ecosistema de Cloudflare.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Cali",
+      "countryCode": "CO",
+      "region": "Valle del Cauca"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "oscar-santiago-velez-muñoz-875894115",
+        "url": "https://linkedin.com/in/oscar-santiago-velez-mu%C3%B1oz-875894115"
+      },
+      {
+        "network": "GitHub",
+        "username": "ossavemu",
+        "url": "https://github.com/ossavemu"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ClientFy",
+      "position": "Arquitecto de Software (Freelance)",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": null,
+      "summary": "Lideré la migración exitosa de una aplicación empresarial monolítica a una arquitectura de microservicios escalable. Implementé un pipeline de CI/CD robusto y una cultura DevOps, reduciendo significativamente los tiempos de despliegue.",
+      "highlights": [
+        "Diseñé servicios backend usando Node.js y NestJS.",
+        "Mejoré el rendimiento y la flexibilidad del sistema.",
+        "Optimicé la entrega de valor a los usuarios finales."
+      ]
+    },
+    {
+      "name": "Polux Apps",
+      "position": "Desarrollador Web Frontend",
+      "url": "",
+      "startDate": "2021-06-01",
+      "endDate": null,
+      "summary": "Desarrollé y mantuve interfaces de usuario responsivas y de alto rendimiento para aplicaciones web empresariales usando Vue.js. Desplegué y gestioné servicios en Amazon Web Services (AWS).",
+      "highlights": [
+        "Integré componentes frontend con servicios backend mediante APIs REST.",
+        "Optimicé servicios para costo y rendimiento en AWS."
+      ]
+    },
+    {
+      "name": "Universidad del Valle",
+      "position": "Docente Universitario",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": null,
+      "summary": "Instruí a más de 1,000 estudiantes en cursos fundamentales y avanzados de programación, desarrollo web y arquitectura de software. Diseñé planes de estudio enfocados en tecnologías emergentes como IA y computación en la nube.",
+      "highlights": []
+    },
+    {
+      "name": "Universidad ICESI",
+      "position": "Supervisor Educativo y Desarrollador Principal",
+      "url": "",
+      "startDate": "2023-01-01",
+      "endDate": "2023-12-31",
+      "summary": "Lideré el ciclo de vida completo del desarrollo de EdutekaLab, una plataforma educativa con herramientas de IA. Dirigí iniciativas educativas para mejorar el rendimiento académico a través de la tecnología.",
+      "highlights": [
+        "Construido con React, Node.js y MySQL."
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Google Creative Campus & Unicafam",
+      "url": "",
+      "area": "Especialización en Tecnologías de la Información",
+      "studyType": "Especialización",
+      "startDate": "2022-01-01",
+      "endDate": "2022-12-31",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Universidad del Valle",
+      "url": "",
+      "area": "Filosofía",
+      "studyType": "Título Profesional",
+      "startDate": "2018-01-01",
+      "endDate": "2022-12-31",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Universidad ICESI",
+      "url": "",
+      "area": "Ciencias Sociales y Ciencia Política",
+      "studyType": "Licenciatura",
+      "startDate": "2016-01-01",
+      "endDate": "2021-12-31",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    { "name": "Backend", "level": "", "keywords": ["Python", "Node.js", "NestJS", "Express.js", "Prisma ORM"] },
+    { "name": "Frontend", "level": "", "keywords": ["React", "Vue.js", "JavaScript", "HTML5", "CSS3"] },
+    { "name": "Bases de Datos", "level": "", "keywords": ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+    { "name": "DevOps & Cloud", "level": "", "keywords": ["AWS", "Cloudflare", "Docker", "NGINX", "CI/CD"] },
+    { "name": "Web Scraping", "level": "", "keywords": ["Extracción de Datos", "Scripts de Automatización"] }
+  ],
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Migración de Arquitectura Empresarial | ClientFy",
+      "isActive": true,
+      "description": "Reestructuré un sistema monolítico heredado para mejorar la escalabilidad y el rendimiento, liderando la transición a una arquitectura de microservicios e implementando un pipeline DevOps completo.",
+      "highlights": ["Node.js", "NestJS", "Microservicios", "DevOps", "CI/CD"],
+      "url": "https://github.com/ossavemu/clientfy-migration",
+      "github": "https://github.com/ossavemu/clientfy-migration"
+    },
+    {
+      "name": "EdutekaLab | Plataforma Educativa con IA",
+      "isActive": true,
+      "description": "Desarrollé una plataforma SaaS integral para educadores, implementando funcionalidades para la planificación de lecciones, generación de rúbricas y gamificación mediante IA.",
+      "highlights": ["React", "Integración IA", "SaaS", "EdTech", "Gamificación"],
+      "url": "https://github.com/ossavemu/edutekalab",
+      "github": "https://github.com/ossavemu/edutekalab"
+    }
+  ]
+}
